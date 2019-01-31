@@ -13,7 +13,7 @@ const jsLoader = [{
 
 const getJsKotlinSourceMapLoader = (config) => [{
   test: /\.js$/,
-  include: paths.kotlinOutputPath,
+  include: config.viewLayerKotlinOut,
   loader: 'source-map-loader',
   enforce: 'pre',
 }]

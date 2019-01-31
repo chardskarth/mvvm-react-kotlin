@@ -1,7 +1,7 @@
 web:
   view-layer:
     port: 8001
-    use-kotlin: false
+    use-kotlin: true
     kotlin-entry: src/main/kotlin
     js-entry: src/main/js/application.js
     public-path: /

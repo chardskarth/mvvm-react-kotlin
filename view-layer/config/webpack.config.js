@@ -84,9 +84,12 @@ function getPlugins() {
     // needed for HMR
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      templateContent: "<div id=\"root\"></div>",
+      inject: true
+    }),
     new webpack.HotModuleReplacementPlugin(),
-    // new WatchMissingNodeModulesPlugin(config.viewLayerNodeModules), 
+    new WatchMissingNodeModulesPlugin(config.viewLayerNodeModules), 
   ];
 
   if (config.viewLayerUseKotlin) {
@@ -94,7 +97,10 @@ function getPlugins() {
       src: config.viewLayerKotlinEntry,
       output: config.viewLayerKotlinOut,
       moduleName: kotlinModuleName,
-      librariesAutoLookup: true
+      librariesAutoLookup: true,
+      packagesContents: [
+        require(config.viewLayerPackageJson),
+      ],
     }));
   }
 
