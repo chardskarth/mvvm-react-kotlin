@@ -1,0 +1,14 @@
+server:
+  context-path: /
+
+spring:
+  application:
+    name: autobahn-corporate
+  jmx:
+    default-domain: autobahn-corporate
+
+routes:
+  proxy-to-url: http://10.19.23.170:8080/autobahn-core/api
+  proxy-to-headers:
+    x-client-id: 5a334935-a4db-4756-8f3d-662325266532
+    x-client-secret: BeHgt2Kjg4tFJgCqrDNFKpkS2FrMYDBBzbKCsJE4d8Sqy48ejJwVP58Pnm96

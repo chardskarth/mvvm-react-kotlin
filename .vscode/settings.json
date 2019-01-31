@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 2,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.gradle": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/bin": true
+    }
+}

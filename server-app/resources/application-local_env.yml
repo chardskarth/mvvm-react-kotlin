@@ -1,0 +1,18 @@
+server:
+  context-path: /
+
+web:
+  api-base: /api
+  public-path:
+    app: /
+    copy-from: ./front-end/public
+  server:
+    host: localhost
+    port: 3100
+    proxy-to-url: http://localhost:8094/api
+
+routes:
+  proxy-to-url: http://localhost:8080/autobahn-core/
+  proxy-to-headers:
+    x-client-id: 5a334935-a4db-4756-8f3d-662325266532
+    x-client-secret: BeHgt2Kjg4tFJgCqrDNFKpkS2FrMYDBBzbKCsJE4d8Sqy48ejJwVP58Pnm96

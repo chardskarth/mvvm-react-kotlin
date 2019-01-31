@@ -1,0 +1,19 @@
+server:
+  port: 8094
+
+spring:
+  profiles:
+    active: prod
+  mvc:
+    favicon:
+      enabled: false
+
+web:
+  output-path:
+    app: ./build-main-app
+    storybook: ./build-storybook-app
+  entry-src: ./front-end/src/index.js
+
+logging:
+  level:
+    org.sprintframework.security: DEBUG

@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "SL3TH38Y7N.com.unionbankph.corporate",
+                "paths": [
+                    "NOT /e/*",
+                    "*",
+                    "/"
+                ]
+            }
+        ]
+    }
+}

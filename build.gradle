@@ -1,0 +1,64 @@
+buildscript {
+	apply from: "versions.gradle"
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${spring_boot_version}")
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}")
+		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlin_version}")
+	}
+}
+repositories {
+	mavenCentral()
+}
+
+subprojects {
+	repositories {
+		maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
+		maven { url "https://kotlin.bintray.com/kotlinx" }
+		maven { url "http://dl.bintray.com/kotlin/kotlin-js-wrappers" }
+		jcenter()
+	}
+
+	def projectName = name
+
+	ext.applyKotlinJS = {
+		plugins {
+			id 'kotlin2js' version kotlin_version
+		}
+
+		sourceSets {
+			main {
+				kotlin {
+					srcDirs = ["$projectDir/src"]
+				}
+			}
+		}
+
+		dependencies {
+			compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+			compile "org.jetbrains.kotlinx:kotlinx-html-js:$kotlinx_html_version"
+			testCompile "org.jetbrains.kotlin:kotlin-test-js"
+		}
+
+		compileKotlin2Js {
+			kotlinOptions {
+				outputFile = "$projectDir/build/classes/main/${projectName}.js"
+				moduleKind = "commonjs"
+				sourceMap = true
+				sourceMapEmbedSources = "always"
+			}
+		}
+	}
+}
+
+project(':server-app') {
+	apply plugin: 'war'
+	apply plugin: 'kotlin'
+	apply plugin: 'kotlin-spring'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+}
