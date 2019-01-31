@@ -2,6 +2,7 @@
     "editor.tabSize": 2,
     "java.configuration.updateBuildConfiguration": "automatic",
     "files.exclude": {
+        "**/.cache": true,
         "**/.classpath": true,
         "**/.gradle": true,
         "**/.project": true,

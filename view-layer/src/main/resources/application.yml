@@ -1,0 +1,8 @@
+web:
+  view-layer:
+    port: 8001
+    use-kotlin: false
+    kotlin-entry: src/main/kotlin
+    js-entry: src/main/js/application.js
+    public-path: /
+    content-base: /
