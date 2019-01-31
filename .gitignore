@@ -289,5 +289,9 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
+### https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems
+.idea/modules.xml
+.idea/**/*.iml
+
 ### Jest snapshots
 __snapshots__
