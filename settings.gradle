@@ -2,3 +2,5 @@ rootProject.name = 'mvv-react-kotlin'
 
 include 'server-app'
 project(':server-app').projectDir = new File(rootDir, 'server-app')
+
+include 'view-layer'

@@ -23,6 +23,6 @@ fun RBuilder.app() = child(App::class) {}
 
 fun main(args: Array<String>) {
   render(document.getElementById("root")) {
-    app()
+//    app()
   }
 }
