@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvv-react-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/mvv-react-kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server-app/mvv-react-kotlin.server-app.iml" filepath="$PROJECT_DIR$/.idea/modules/server-app/mvv-react-kotlin.server-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server-app/mvv-react-kotlin.server-app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server-app/mvv-react-kotlin.server-app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server-app/mvv-react-kotlin.server-app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server-app/mvv-react-kotlin.server-app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/view-layer/mvv-react-kotlin.view-layer.iml" filepath="$PROJECT_DIR$/.idea/modules/view-layer/mvv-react-kotlin.view-layer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/view-layer/mvv-react-kotlin.view-layer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/view-layer/mvv-react-kotlin.view-layer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/view-layer/mvv-react-kotlin.view-layer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/view-layer/mvv-react-kotlin.view-layer.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mvvm-react-kotlin.iml" filepath="$PROJECT_DIR$/.idea/mvvm-react-kotlin.iml" />
+    </modules>
+  </component>
+</project>
