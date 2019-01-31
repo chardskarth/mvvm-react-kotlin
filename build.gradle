@@ -26,8 +26,6 @@ subprojects {
 	def projectName = name
 
 	ext.applyKotlinJS = {
-		apply plugin: 'kotlin2js'
-
 		sourceSets {
 			main {
 				kotlin {
@@ -35,26 +33,11 @@ subprojects {
 				}
 			}
 		}
-
-		dependencies {
-			compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
-			compile "org.jetbrains.kotlinx:kotlinx-html-js:$kotlinx_html_version"
-			compile 'org.jetbrains:kotlin-react:16.6.0-pre.68-kotlin-1.3.20'
-			compile 'org.jetbrains:kotlin-react-dom:16.6.0-pre.68-kotlin-1.3.20'
-			compile 'org.jetbrains:kotlin-react-router-dom:4.3.1-pre.68-kotlin-1.3.20'
-			compile 'org.jetbrains:kotlin-extensions:1.0.1-pre.68-kotlin-1.3.20'
-			testCompile "org.jetbrains.kotlin:kotlin-test-js"
-		}
-
-		compileKotlin2Js {
-			kotlinOptions {
-				outputFile = "$projectDir/build/classes/main/${projectName}.js"
-				moduleKind = "commonjs"
-				sourceMap = true
-				sourceMapEmbedSources = "always"
-			}
-		}
 	}
+}
+
+project (':view-layer') {
+	apply plugin: 'kotlin2js'
 }
 
 project(':server-app') {
